@@ -1,0 +1,60 @@
+<div class="container py-5">
+  {{!-- title --}}
+  <div class="d-flex justify-content-center">
+    <h3 class="card-title text-light mx-2">你想對誰說幹話?</h3>
+  </div>
+
+
+  <form action="/" method="POST">
+
+    <div class="row d-flex justify-content-center mb-2">
+      {{!-- job --}}
+
+      <div class="card mx-3" style="width: 18rem;">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+          class="card-img-top" alt="工程師" style="height:80%">
+        <div class="card-body d-flex justify-content-center">
+          <div class="custom-control custom-radio custom-control-inline">
+            <input class="form-check-input" type="radio" name="job" id="工程師" value="工程師">
+            <label class="form-check-label font-weight-bold" for="工程師">工程師</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  mx-3" style="width: 18rem;">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+          class="card-img-top" alt="設計師" style="height:80%">
+        <div class="card-body d-flex justify-content-center">
+          <div class="custom-control custom-radio custom-control-inline">
+            <input class="form-check-input" type="radio" name="job" id="設計師" value="設計師">
+            <label class="form-check-label font-weight-bold" for="設計師">設計師</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  mx-3" style="width: 18rem;">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+          class="card-img-top" alt="創業家" style="height:80%">
+        <div class="card-body d-flex justify-content-center">
+          <div class="custom-control custom-radio custom-control-inline">
+            <input class="form-check-input" type="radio" name="job" id="創業家" value="創業家">
+            <label class="form-check-label font-weight-bold" for="創業家">創業家</label>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="row d-flex justify-content-center ">
+      {{!-- bottom --}}
+      <div class="d-flex justify-content-center ">
+        <button class="btn btn-success mx-2" type="submit">產生幹話</button>
+        {{!-- phrase --}}
+        <textarea class="form-control mx-1" id=" trash_talk">
+           {{randomTrashTalk}}
+        </textarea>
+      </div>
+    </div>
+  </form>
+</div>
