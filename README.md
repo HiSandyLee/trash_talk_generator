@@ -1,8 +1,8 @@
 # 環境建置與需求 
-Node.js v10.15.0
-express ^4.17.1
-express-handlebars ^5.2.0
-body-parser 1.19.0
+* Node.js v10.15.0
+* express ^4.17.1
+* express-handlebars ^5.2.0
+* body-parser 1.19.0
 
 # 安裝與執行
 1. 下載本專案
