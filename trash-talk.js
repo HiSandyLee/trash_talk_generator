@@ -11,23 +11,28 @@ function trashTalk(options) {
   }
   const phrase = ['很簡單', '很容易', '很快', '很正常']
 
-  let trashCollection = ''
-  if (options.job === '工程師') {
+  const job = options.job
+  const occupation = {
+    engineer: '工程師',
+    designer: '設計師',
+    entrepreneur: '創業家'
+  }
+
+  if (job === occupation) {
     trashCollection = trashCollection.concat(sample(task.engineer))
   }
 
-  if (options.job === '設計師') {
+  if (job === occupation) {
     trashCollection = trashCollection.concat(sample(task.designer))
   }
 
-  if (options.job === '創業家') {
+  if (job === occupation) {
     trashCollection = trashCollection.concat(sample(task.entrepreneur))
   }
-  if (!options.job) {
+  if (!job) {
     return '請輸入幹話對象！！！'
   }
-  let randomTrashTalk = `身為一個${options.job},${trashCollection},${sample(phrase)}吧!`
-  return randomTrashTalk
+  return `身為一個${occupation[job]},${sample(task[job])},${sample(phrase)}吧!`
 }
 
 module.exports = trashTalk
